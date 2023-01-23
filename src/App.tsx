@@ -15,19 +15,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-        <p>
-          <a href="https://vitejs.dev/guide/features.html" target="_blank">
-            Vite Docs
-          </a>
-        </p>
-      </div>
-      <p className="read-the-docs"></p>
+      <h1>Hogwarts Quizz</h1>
     </div>
   );
 }
