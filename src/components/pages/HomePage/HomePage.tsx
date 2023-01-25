@@ -1,9 +1,8 @@
-import { PageTemplate } from "@/components";
+import { Header, PageTemplate } from "@/components";
 
 export const HomePage = () => {
   return (
-    <PageTemplate>
-      <h1>Home Page</h1>
+    <PageTemplate header={<Header />}>
     </PageTemplate>
   );
 };
