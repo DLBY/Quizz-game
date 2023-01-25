@@ -33,9 +33,8 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        hogwarts: "url('/src/assets/images/hogwarts-large.png')",
-        'hogwarts-medium': "url('/src/assets/images/hogwarts-medium.png')",
-        'hogwarts-small': "url('/src/assets/images/hogwarts-small.png')",
+        'hogwarts-lg': "url('/src/assets/images/hogwarts-largest.jpg')",
+        'hogwarts-md': "url('/src/assets/images/hogwarts-medium.jpg')",
       },
     },
   },
