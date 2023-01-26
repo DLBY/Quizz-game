@@ -36,6 +36,10 @@ module.exports = {
         'hogwarts-lg': "url('/src/assets/images/hogwarts-largest.jpg')",
         'hogwarts-md': "url('/src/assets/images/hogwarts-medium.jpg')",
       },
+      boxShadow: {
+        btn: 'inset 0 -5px 0 0 rgba(0, 0, 0, .2)',
+        'btn-hover': 'inset 0 -8px 0 0 rgba(0, 0, 0, .2)',
+      },
     },
   },
   variants: {},
