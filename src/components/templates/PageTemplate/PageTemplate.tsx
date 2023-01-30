@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, PrimaryNav, Wrapper } from '@/components';
+import { Footer, Header, PrimaryNav, Wrapper } from '@/components';
 
 // PageTemplate types
 interface PageTemplateProps {
@@ -13,6 +13,7 @@ export const PageTemplate = ({ children, header } : PageTemplateProps) => {
       <Header />
       {children}
       <PrimaryNav />
+      <Footer />
     </Wrapper>
   );
 };

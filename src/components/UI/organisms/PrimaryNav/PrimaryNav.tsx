@@ -1,12 +1,12 @@
-import { Nav } from '@/components';
+import { Nav, Link } from '@/components';
 
 export const PrimaryNav = () => {
   return (
     <Nav>
-      <span className="text-white font-bold text-4xl lg:text-5xl"> Jouer </span>
-      <span className="text-white font-bold text-4xl lg:text-5xl"> Règles du jeu </span>
-      <span className="text-white font-bold text-4xl lg:text-5xl"> Classement </span>
-      <span className="text-white font-bold text-4xl lg:text-5xl"> Paramètres </span>
+      <Link variant="white" size="4xl">Jouer</Link>
+      <Link variant="white" size="3xl">Règles du jeu</Link>
+      <Link variant="white" size="3xl">Classement</Link>
+      <Link variant="white" size="3xl">Paramètres</Link>
     </Nav>
   );
 };
