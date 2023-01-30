@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-type LinkProps = {
+interface LinkProps {
   children: React.ReactNode;
   className?: string;
 };
