@@ -30,6 +30,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Poppins-Regular', 'sans-serif'],
+      bold: ['Poppins-Bold', 'sans-serif'],
     },
     extend: {
       backgroundImage: {
