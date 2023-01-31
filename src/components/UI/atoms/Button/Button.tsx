@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-type ButtonProps = {
+interface ButtonProps {
   children: React.ReactNode;
   className?: string;
   variant?: string;

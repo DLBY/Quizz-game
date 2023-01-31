@@ -4,7 +4,7 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   mode: 'jit',
-  purge: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -30,6 +30,7 @@ module.exports = {
     },
     fontFamily: {
       sans: ['Poppins-Regular', 'sans-serif'],
+      bold: ['Poppins-Bold', 'sans-serif'],
     },
     extend: {
       backgroundImage: {
