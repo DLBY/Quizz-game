@@ -6,6 +6,7 @@ export { Text } from './UI/atoms/Text/Text';
 
 // Molecules
 export { Nav } from './UI/molecules/Nav/Nav';
+export { Popup } from './UI/molecules/Popup/Popup';
 
 // Organisms
 export { Header } from './UI/organisms/Header/Header';
