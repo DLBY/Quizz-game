@@ -1,3 +1,5 @@
+import { Button } from "@/components";
+import clsx from "clsx";
 import { useEffect, useState } from "react";
 
 export const Settings = () => {
@@ -30,30 +32,35 @@ export const Settings = () => {
   };
   
   return (
+    <>
     <div className="settings">
       <div>
-      <h3>Catégorie :</h3>
-      <select name="category" id="category">
+        <h3>Catégorie :</h3>
+        <select name="category" id="category" onChange={handleCategory}>
         {options.map((option: any) => (
           <option key={option.id} value={option.id}>
             {option.name}
           </option>
         ))}
-      </select>
-      
+        </select>
       </div>
       <div>
-      <h3>Nombre de questions :</h3>
-      <input type="number" min="1" max="10" onChange={handleNumber} />
+        <h3>Nombre de questions :</h3>
+        <input type="number" min="1" max="10" onChange={handleNumber} />
       </div>
       <div>
-      <h3>Difficulté :</h3>
-      <select name="difficulty" id="difficulty" onChange={handleDifficulty}>
-        <option value="easy" key="easy">Facile</option>
-        <option value="medium" key="medium">Moyen</option>
-        <option value="hard" key="hard">Difficile</option>
-      </select>
+        <h3>Difficulté :</h3>
+        <select name="difficulty" id="difficulty" onChange={handleDifficulty}>
+          <option value="easy" key="easy">Facile</option>
+          <option value="medium" key="medium">Moyen</option>
+          <option value="hard" key="hard">Difficile</option>
+        </select>
       </div>
-    </div>
+  </div>
+  <Button className={clsx(
+    'bg-green-secondary self-end lg:self-auto px-4 py-3 text-lg ',
+    'lg:self-auto lg:order-last'
+    )}>Commencer</Button>
+  </>
   )
 }

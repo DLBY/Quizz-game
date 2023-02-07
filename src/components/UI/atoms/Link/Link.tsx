@@ -5,9 +5,10 @@ interface LinkProps {
   className?: string;
   variant?: string;
   size?: string;
+  onClick?: () => void;
 };
 
-export const Link = ({ children, className, size, variant, ...props } : LinkProps) => {
+export const Link = ({ children, className, size, variant, onClick, ...props } : LinkProps) => {
   return (
     <span className={clsx(
       'cursor-pointer',
@@ -19,7 +20,7 @@ export const Link = ({ children, className, size, variant, ...props } : LinkProp
       'hover:text-sand',
       'transition-colors duration-200',
       className,
-    )} {...props}>
+    )} {...props} onClick={onClick}>
       {children}
       </span>
   );

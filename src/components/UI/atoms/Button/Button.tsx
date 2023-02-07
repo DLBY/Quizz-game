@@ -1,14 +1,18 @@
 import clsx from "clsx";
+import { useState } from "react";
+import { Popup } from "@/components"
 
 interface ButtonProps {
   children: React.ReactNode;
   className?: string;
-  variant?: string;
   size?: string;
 };
 
-export const Button = ({ children, className, size, variant, ...props } : ButtonProps) => {
+export const Button = ({ children, className, size, ...props } : ButtonProps) => {
+
+
   return (
+    <>
     <button type="button" className={clsx(
   'font-bold rounded-2xl shadow-btn',
   `sm:active:shadow-btn sm:hover:shadow-btn-hover`, `group relative overflow-hidden transition-all duration-200 ${className}`,
@@ -17,5 +21,6 @@ export const Button = ({ children, className, size, variant, ...props } : Button
         {children}
       </div>
     </button>
+    </>
   );
 };

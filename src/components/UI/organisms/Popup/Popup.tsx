@@ -1,12 +1,15 @@
 import { Settings } from "@/components";
+import React from "react";
 
 interface PopupProps {
   children?: React.ReactNode;
   title?: string;
+  isOpen: boolean;
 }
 
-export const Popup = ({ children, title } : PopupProps) => {
+export const Popup = ({ children, title, isOpen } : PopupProps) => {
 
+  if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-50 flex min-h-full w-full justify-center overflow-auto bg-green-dark/80">
       <div className="flex flex-wrap justify-center md:flex-nowrap md:space-x-4 lg:mt-0 w-full max-w-md items-center ">
