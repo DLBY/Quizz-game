@@ -6,12 +6,13 @@ export { Text } from './UI/atoms/Text/Text';
 
 // Molecules
 export { Nav } from './UI/molecules/Nav/Nav';
-export { Popup } from './UI/molecules/Popup/Popup';
+export { Settings } from './UI/molecules/Settings/Settings';
 
 // Organisms
 export { Header } from './UI/organisms/Header/Header';
 export { Footer } from './UI/organisms/Footer/Footer';
 export { PrimaryNav } from './UI/organisms/PrimaryNav/PrimaryNav';
+export { Popup } from './UI/organisms/Popup/Popup';
 
 // Templates
 export { PageTemplate } from './templates/PageTemplate/PageTemplate';
