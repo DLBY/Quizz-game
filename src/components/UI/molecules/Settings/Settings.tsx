@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 
 export const Settings = () => {
   const [options, setOptions] = useState<any>([]);
+  const [questionCategory, setQuestionCategory] = useState<any>([]);
+  const [questionNumber, setQuestionNumber] = useState<any>([]);
+  const [questionDifficulty, setQuestionDifficulty] = useState<any>([]);
 
   const apiURL = 'https://opentdb.com/api_category.php';
 
@@ -13,6 +16,18 @@ export const Settings = () => {
   useEffect(() => {
     fetchOptions();
   }, []);
+
+  const handleCategory = (e: any) => {
+    setQuestionCategory(e.target.value);
+  };
+
+  const handleNumber = (e: any) => {
+    setQuestionNumber(e.target.value);
+  };
+
+  const handleDifficulty = (e: any) => {
+    setQuestionDifficulty(e.target.value);
+  };
   
   return (
     <div className="settings">
@@ -29,14 +44,14 @@ export const Settings = () => {
       </div>
       <div>
       <h3>Nombre de questions :</h3>
-      <input type="number" min="1" max="10" />
+      <input type="number" min="1" max="10" onChange={handleNumber} />
       </div>
       <div>
       <h3>Difficulté :</h3>
-      <select name="difficulty" id="difficulty">
-        <option value="easy">Facile</option>
-        <option value="medium">Moyen</option>
-        <option value="hard">Difficile</option>
+      <select name="difficulty" id="difficulty" onChange={handleDifficulty}>
+        <option value="easy" key="easy">Facile</option>
+        <option value="medium" key="medium">Moyen</option>
+        <option value="hard" key="hard">Difficile</option>
       </select>
       </div>
     </div>
