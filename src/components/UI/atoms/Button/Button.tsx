@@ -1,6 +1,4 @@
 import clsx from "clsx";
-import { useState } from "react";
-import { Popup } from "@/components"
 
 interface ButtonProps {
   children: React.ReactNode;

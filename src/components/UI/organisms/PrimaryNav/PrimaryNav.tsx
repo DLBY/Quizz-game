@@ -3,11 +3,18 @@ import { useState } from 'react';
 
 export const PrimaryNav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClose, setIsClose] = useState(false);
 
   const handleOpenPopup = () => {
     setIsOpen(true);
-    console.log('test');
+    setIsClose(false);
   };
+
+  const handleClosePopup = () => {
+    setIsClose(true);
+    setIsOpen(false);
+  };
+
   return (
     <>
     <Nav>
@@ -17,8 +24,8 @@ export const PrimaryNav = () => {
       <Link variant="white" size="medium">Paramètres</Link>
     </Nav>
 
-    {isOpen && (
-      <Popup title="Réglage" isOpen={isOpen}/>
+    {isOpen && !isClose && (
+      <Popup title="Réglage" isOpen={isOpen} onClick={handleClosePopup} />
     )
       }
     </>
