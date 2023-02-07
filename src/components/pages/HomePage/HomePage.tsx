@@ -1,4 +1,4 @@
-import { Header, PageTemplate } from "@/components";
+import { Header, PageTemplate, Popup } from "@/components";
 
 export const HomePage = () => {
   return (
