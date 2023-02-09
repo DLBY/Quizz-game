@@ -10,9 +10,9 @@ interface PopupProps {
 }
 
 export const questionAtom = atom({
-  questionCategory: '',
-  questionNumber: '',
-  questionDifficulty: '',
+  category: '',
+  amount: '',
+  difficulty: '',
 });
 
 export const Popup = ({ children, title, isOpen, onClick }: PopupProps) => {
