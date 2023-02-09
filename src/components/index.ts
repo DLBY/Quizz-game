@@ -7,6 +7,7 @@ export { Text } from './UI/atoms/Text/Text';
 // Molecules
 export { Nav } from './UI/molecules/Nav/Nav';
 export { Settings } from './UI/molecules/Settings/Settings';
+export { Question } from './UI/molecules/Question/Question';
 
 // Organisms
 export { Header } from './UI/organisms/Header/Header';

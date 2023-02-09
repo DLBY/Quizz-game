@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { useEffect, useState } from "react";
 
 export const Settings = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [options, setOptions] = useState<any>([]);
   const [questionCategory, setQuestionCategory] = useState<any>([]);
   const [questionNumber, setQuestionNumber] = useState<any>([]);
@@ -11,10 +12,20 @@ export const Settings = () => {
   const apiURL = 'https://opentdb.com/api_category.php';
 
   const fetchOptions = async () => {
+    setIsLoading(true);
     const response = await fetch(apiURL);
     const data = await response.json();
     setOptions(data.trivia_categories);
+    setIsLoading(false);
   };
+
+  const fetchQuestions = async () => {
+    const apiURL = `https://opentdb.com/api.php?amount=${questionNumber}&category=${questionCategory}&difficulty=${questionDifficulty}&type=multiple`;
+    const response = await fetch(apiURL);
+    const data = await response.json();
+    console.log(data);
+  };
+
   useEffect(() => {
     fetchOptions();
   }, []);
@@ -30,8 +41,8 @@ export const Settings = () => {
   const handleDifficulty = (e: any) => {
     setQuestionDifficulty(e.target.value);
   };
-  
-  return (
+  if (!isLoading) {
+    return (
     <>
     <div className="settings">
       <div>
@@ -58,9 +69,16 @@ export const Settings = () => {
       </div>
   </div>
   <Button className={clsx(
-    'bg-green-secondary self-end lg:self-auto px-4 py-3 text-lg ',
-    'lg:self-auto lg:order-last'
-    )}>Commencer</Button>
+  'bg-green-secondary self-end lg:self-auto px-4 py-3 text-lg ',
+  'lg:self-auto lg:order-last'
+  )} onClick={fetchQuestions}>Commencer</Button>
   </>
-  )
+      )
+    } else {
+      return (
+        <div className="settings">
+          <h2>Chargement...</h2>
+        </div>
+      )
+    }
 }
