@@ -1,5 +1,6 @@
 import { Settings } from "@/components";
 import React from "react";
+import { atom } from 'jotai';
 
 interface PopupProps {
   children?: React.ReactNode;
@@ -8,8 +9,13 @@ interface PopupProps {
   onClick?: () => void;
 }
 
-export const Popup = ({ children, title, isOpen, onClick } : PopupProps) => {
-  
+export const questionAtom = atom({
+  questionCategory: '',
+  questionNumber: '',
+  questionDifficulty: '',
+});
+
+export const Popup = ({ children, title, isOpen, onClick }: PopupProps) => {
   if (!isOpen) return null;
   return (
     <div className="fixed inset-0 z-50 flex min-h-full w-full justify-center overflow-auto bg-green-dark/80">

@@ -1,3 +1,6 @@
+// Atoms states
+export { questionAtom } from './UI/organisms/Popup/Popup';
+
 // Atoms
 export { Wrapper } from './UI/atoms/Wrapper/Wrapper';
 export { Button } from './UI/atoms/Button/Button';
